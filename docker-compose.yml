@@ -4,7 +4,7 @@ services:
   # Service: web
   web:
     build: .
-    container_name: fastapi_calculator
+    container_name: fastapi_calculator_mod9
     ports:
       - "8000:8000"
     volumes:
@@ -30,7 +30,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
